@@ -10,4 +10,19 @@ if ($reponse === false) {
    return  json_decode($reponse, true);
 }
 }
+function weatherIcon($main) {
+    if ($main === "Clear") {
+        return "ph-sun";
+    } elseif ($main === "Clouds") {
+        return "ph-cloud";
+    } elseif ($main === "Rain" || $main === "Drizzle") {
+        return "ph-cloud-rain";
+    } elseif ($main === "Thunderstorm") {
+        return "ph-cloud-lightning";
+    } elseif ($main === "Snow") {
+        return "ph-cloud-snow";
+    } else {
+        return "ph-cloud-fog"; // Mist, Haze, Fog...
+    }
+}
 ?>

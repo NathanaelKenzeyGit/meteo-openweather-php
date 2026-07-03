@@ -17,7 +17,8 @@ foreach ($villes as $n) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style/output.css">
-    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="refresh" content="20">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Projet Météo</title>
 </head>
 <body class="bg-slate-900">
@@ -28,7 +29,7 @@ foreach ($villes as $n) {
             <?php foreach ($total as $ville) : ?>
                 <div class="bg-slate-800 rounded-xl p-5 text-center">
                     <h2 class="text-xl font-semibold text-slate-100 mb-1"><?php echo $ville["name"]; ?></h2>
-
+                       <i class="ph <?php echo weatherIcon($ville["weather"][0]["main"]); ?> text-6xl text-amber-400"></i>
 
                     <p class="text-4xl font-bold text-amber-400 mb-2">
                         <?php echo round($ville["main"]["temp"]); ?>°C
