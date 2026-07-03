@@ -1,0 +1,8 @@
+# .gitignore 
+.env 
+node_modules/
+package.json
+package-lock.json
+composer.lock
+composer.json 
+test.php
